@@ -1,15 +1,15 @@
-html{
+html {
     font-family: 'Quicksand', sans-serif; /*this is the font for the whole site*/
 }
-h1{
+h1 {
     font-size: 60px;
     text-align: left;
 }
-h2{
+h2 {
     font-size: 30px;
     text-align: left;
 }
-p{
+p {
     font-size: 15px;
     text-align: justify;
 }
