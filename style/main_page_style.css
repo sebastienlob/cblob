@@ -20,5 +20,5 @@ p {
     text-align: justify;
 }
 img {
-    border: solid;
+    border-radius: 30px;
 }
