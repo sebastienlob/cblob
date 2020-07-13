@@ -20,8 +20,8 @@ p {
     text-align: justify;
 }
 img {
-    border: solid;
-    border-radius: 30px;
+    border-width: 0.5ex 0.5ex 0.5ex 0.5ex;
+    border-radius: 5px;
 }
 .fusion {
     border: solid;
