@@ -20,10 +20,10 @@ p {
     text-align: justify;
 }
 img {
-    border-width: 0.5ex 0.5ex 0.5ex 0.5ex;
-    border-radius: 5px;
+    border-width: 1ex 1ex 1ex 1ex;
+    border-radius: 10px;
 }
 .fusion {
-    border: solid;
-    border-radius: 30px;
+    border-width: 1ex 1ex 1ex 1ex;
+    border-radius: 10px;
 }
