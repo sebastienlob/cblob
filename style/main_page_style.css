@@ -26,5 +26,6 @@ img {
 }
 div {
     display: flex;
+    flex-basis: auto;
     justify-content: space-evenly;
 }
