@@ -26,4 +26,5 @@ img {
 div {
     display: flex;
     justify-content: space-evenly;
+    max-width: 100%;
 }
