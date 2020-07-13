@@ -22,9 +22,9 @@ p {
 img {
     border-width: 1px 1px 1px 1px;
     border-radius: 10px;
+    max-width: 100%;
 }
 div {
     display: flex;
     justify-content: space-evenly;
-    max-width: 100%;
 }
