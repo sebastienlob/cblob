@@ -26,6 +26,6 @@ img {
 }
 div {
     display: flex;
-    flex-basis: auto;
+    flex-shrink: 1;
     justify-content: space-evenly;
 }
