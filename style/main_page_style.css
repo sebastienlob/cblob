@@ -4,11 +4,11 @@ html {
 .container > p{
     display: grid;
     grid-template-columns:1fr 1fr 1fr;
-    grid-column: 2;
+    
 }
-h1 {
+header {
     font-size: 60px;
-    text-align: left;
+    text-align: center;
     padding: 10px, 0px;
     margin-bottom: 0;
 }
@@ -23,7 +23,7 @@ h3 {
 p {
     font-size: 15px;
     text-align: justify;
-    grid-row:2;
+    grid-column:2;
 }
 img {
     border-width: 1px 1px 1px 1px;
