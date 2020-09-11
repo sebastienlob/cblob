@@ -8,10 +8,11 @@ html {
     grid-template-columns:1fr 1fr 1fr;
     
 }
+
 .content{
     display: grid;
     grid-template-areas:
-    '. article .';
+        '. article .';
     grid-template-columns:1fr 1fr 1fr;
 }
 header {
@@ -40,7 +41,10 @@ p {
 
 }
 .menu{
-    display:inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
 }
 img {
     border-width: 1px 1px 1px 1px;
