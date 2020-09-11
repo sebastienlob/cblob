@@ -71,6 +71,7 @@ a#one:hover{
     border-radius: 10px;
     padding: 10px;
     color: white;
+    font-weight: bold;
 }
 #two{
     flex-grow: 1;
@@ -86,6 +87,7 @@ a#two:hover{
     border-radius: 10px;
     padding: 10px;
     color: white;
+    font-weight: bold;
 }
 #three{
     flex-grow: 1;
@@ -101,6 +103,7 @@ a#three:hover{
     border-radius: 10px;
     padding: 10px;
     color: white;
+    font-weight: bold;
 }
 #four{
     flex-grow: 1;
@@ -117,6 +120,7 @@ a#four:hover{
     border-radius: 10px;
     padding: 10px;
     color: white;
+    font-weight: bold;
 }
 #five{
     flex-grow: 1;
@@ -132,6 +136,7 @@ a#five:hover{
     border-radius: 10px;
     padding: 10px;
     color: white;
+    font-weight: bold;
 }
 
 img {
