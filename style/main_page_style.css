@@ -4,10 +4,15 @@ html {
 .container{
     display: grid;
     grid-template-areas:
-    'header header header'
-    '. article .';
+    'header header header';
     grid-template-columns:1fr 1fr 1fr;
     
+}
+.content{
+    display: grid;
+    grid-template-areas:
+    '. article .';
+    grid-template-columns:1fr 1fr 1fr;
 }
 header {
     grid-area: header;
@@ -33,6 +38,9 @@ p {
     text-align: justify;
     line-height: 2;
 
+}
+.menu{
+    display:inline-block;
 }
 img {
     border-width: 1px 1px 1px 1px;
