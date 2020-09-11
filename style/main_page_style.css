@@ -9,7 +9,6 @@ h1 {
     text-align: left;
     padding: 10px, 0px;
     margin-bottom: 0;
-    grid-column: 2;
 }
 h2 {
     font-size: 30px;
@@ -22,6 +21,7 @@ h3 {
 p {
     font-size: 15px;
     text-align: justify;
+    grid-column:2;
 }
 img {
     border-width: 1px 1px 1px 1px;
