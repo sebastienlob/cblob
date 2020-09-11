@@ -40,42 +40,42 @@ p {
     line-height: 2;
 
 }
+
 nav.menu{
     display: flex;
-
+    position: sticky;
+    top: 0px;
 }
 
 #one{
     text-align:center;
     flex-grow:1;
-    margin-left: 20px;
-    margin-right: 20px;
+
+
 }
 
 #two{
     flex-grow: 1;
     text-align: center;
-    margin-left: 20px;
-    margin-right: 20px;
+
+
 }
 #three{
     flex-grow: 1;
     text-align: center;
-    margin-left: 20px;
-    margin-right: 20px;
+
 }
 #four{
     flex-grow: 1;
     text-align: center;
-    margin-left: 20px;
-    margin-right: 20px;
+
 }
 
 #five{
     flex-grow: 1;
     text-align: center;
-    margin-left: 20px;
-    margin-right: 20px;
+
+ 
 }
 a{
     color:black;
@@ -83,11 +83,68 @@ a{
     text-decoration: none;
 
 }
-
-a:link, a:visited, a:focus{
+.download{
+    color: blue;
+}
+.download:hover{
+    color: black;
+}
+a#one:link, a#one:visited, a#one:focus{
+    padding: 10px;
+    border-radius: 10px;
     background: white;
 }
-a:hover{
+a#one:hover{
+    background: grey;
+    border-radius: 10px;
+    padding: 10px;
+}
+a#two:link, a#two:visited, a#two:focus{
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+}
+a#two:hover{
+    background: grey;
+    border-radius: 10px;
+    padding: 10px;
+}
+a#three:link, a#three:visited, a#three:focus{
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+}
+a#three:hover{
+    background: grey;
+    border-radius: 10px;
+    padding: 10px;
+}
+a#four:link, a#four:visited, a#four:focus{
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+}
+a#four:hover{
+    background: grey;
+    border-radius: 10px;
+    padding: 10px;
+}
+a#five:link, a#five:visited, a#five:focus{
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+}
+a#five:hover{
+    background: grey;
+    border-radius: 10px;
+    padding: 10px;
+}
+a#one:link, a#one:visited, a#one:focus{
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+}
+a#one:hover{
     background: grey;
     border-radius: 10px;
     padding: 10px;
