@@ -3,6 +3,10 @@ html {
 }
 .container{
     display: grid;
+    grid-template-areas:
+    'header header header'
+    'article article article'
+    'footer footer footer';
     grid-template-columns:1fr 1fr 1fr;
     
 }
@@ -11,8 +15,11 @@ header {
     text-align: center;
     padding: 10px, 0px;
     margin-bottom: 0;
+    grid-area: header;
 }
-
+article{
+    grid-area: article;
+}
 h2 {
     font-size: 30px;
     text-align: center;
@@ -21,10 +28,10 @@ h3 {
     font-size: 25px;
     text-align: left;
 }
-.container > p {
+p {
     font-size: 15px;
     text-align: justify;
-    grid-column:2;
+
 }
 img {
     border-width: 1px 1px 1px 1px;
