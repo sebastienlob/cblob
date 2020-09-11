@@ -98,6 +98,7 @@ a#one:hover{
     background: grey;
     border-radius: 10px;
     padding: 10px;
+    color: white;
 }
 a#two:link, a#two:visited, a#two:focus{
     padding: 10px;
@@ -108,6 +109,7 @@ a#two:hover{
     background: grey;
     border-radius: 10px;
     padding: 10px;
+    color: white;
 }
 a#three:link, a#three:visited, a#three:focus{
     padding: 10px;
@@ -118,6 +120,7 @@ a#three:hover{
     background: grey;
     border-radius: 10px;
     padding: 10px;
+    color: white;
 }
 a#four:link, a#four:visited, a#four:focus{
     padding: 10px;
@@ -128,6 +131,7 @@ a#four:hover{
     background: grey;
     border-radius: 10px;
     padding: 10px;
+    color: white;
 }
 a#five:link, a#five:visited, a#five:focus{
     padding: 10px;
@@ -138,6 +142,7 @@ a#five:hover{
     background: grey;
     border-radius: 10px;
     padding: 10px;
+    color: white;
 }
 a#one:link, a#one:visited, a#one:focus{
     padding: 10px;
