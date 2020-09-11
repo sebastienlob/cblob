@@ -1,16 +1,17 @@
 html {
     font-family: 'Quicksand', sans-serif; /*this is the font for the whole site*/
 }
-.container > p{
-    display: grid;
-    grid-template-columns:1fr 1fr 1fr;
-    
-}
+
 header {
     font-size: 60px;
     text-align: center;
     padding: 10px, 0px;
     margin-bottom: 0;
+}
+.container > p{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    
 }
 h2 {
     font-size: 30px;
