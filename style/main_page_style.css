@@ -1,11 +1,15 @@
 html {
     font-family: 'Quicksand', sans-serif; /*this is the font for the whole site*/
 }
+body {
+    display: grid;
+}
 h1 {
     font-size: 60px;
     text-align: left;
     padding: 10px, 0px;
     margin-bottom: 0;
+    grid-column: 2;
 }
 h2 {
     font-size: 30px;
@@ -23,9 +27,4 @@ img {
     border-width: 1px 1px 1px 1px;
     border-radius: 10px;
     max-width: 100vh;
-}
-div {
-    display: flex;
-    flex-shrink: 1;
-    justify-content: space-evenly;
 }
