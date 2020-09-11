@@ -43,9 +43,11 @@ p {
 .menu{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    
+    justify-content: space-between;
+    flex-grow: 40px;
+
 }
+
 img {
     border-width: 1px 1px 1px 1px;
     border-radius: 10px;
