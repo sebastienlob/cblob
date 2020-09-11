@@ -11,7 +11,9 @@ html {
 }
 header {
     grid-area: header;
-
+    font-size: 60px;
+    padding: 10px, 0px;
+    margin-bottom: 0;
 }
 article{
     grid-area: article;
