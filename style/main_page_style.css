@@ -1,8 +1,9 @@
 html {
     font-family: 'Quicksand', sans-serif; /*this is the font for the whole site*/
 }
-body {
+.container{
     display: grid;
+    grid-template-columns:1fr 1fr 1fr;
 }
 h1 {
     font-size: 60px;
