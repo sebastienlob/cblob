@@ -5,8 +5,7 @@ html {
     display: grid;
     grid-template-areas:
     'header header header'
-    'article article article'
-    'footer footer footer';
+    'article article article';
     grid-template-columns:1fr 1fr 1fr;
     
 }
