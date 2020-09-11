@@ -40,7 +40,17 @@ p {
     line-height: 2;
 
 }
-
+a{
+    color:black;
+    outline: none;
+    text-decoration: none;
+}
+.download{
+    color: blue;
+}
+.download:hover{
+    color: black;
+}
 nav.menu{
     display: flex;
     position: sticky;
@@ -50,44 +60,6 @@ nav.menu{
 #one{
     text-align:center;
     flex-grow:1;
-
-
-}
-
-#two{
-    flex-grow: 1;
-    text-align: center;
-
-
-}
-#three{
-    flex-grow: 1;
-    text-align: center;
-
-}
-#four{
-    flex-grow: 1;
-    text-align: center;
-
-}
-
-#five{
-    flex-grow: 1;
-    text-align: center;
-
- 
-}
-a{
-    color:black;
-    outline: none;
-    text-decoration: none;
-
-}
-.download{
-    color: blue;
-}
-.download:hover{
-    color: black;
 }
 a#one:link, a#one:visited, a#one:focus{
     padding: 10px;
@@ -99,6 +71,10 @@ a#one:hover{
     border-radius: 10px;
     padding: 10px;
     color: white;
+}
+#two{
+    flex-grow: 1;
+    text-align: center;
 }
 a#two:link, a#two:visited, a#two:focus{
     padding: 10px;
@@ -111,6 +87,10 @@ a#two:hover{
     padding: 10px;
     color: white;
 }
+#three{
+    flex-grow: 1;
+    text-align: center;
+}
 a#three:link, a#three:visited, a#three:focus{
     padding: 10px;
     border-radius: 10px;
@@ -121,6 +101,11 @@ a#three:hover{
     border-radius: 10px;
     padding: 10px;
     color: white;
+}
+#four{
+    flex-grow: 1;
+    text-align: center;
+
 }
 a#four:link, a#four:visited, a#four:focus{
     padding: 10px;
@@ -133,6 +118,10 @@ a#four:hover{
     padding: 10px;
     color: white;
 }
+#five{
+    flex-grow: 1;
+    text-align: center;
+}
 a#five:link, a#five:visited, a#five:focus{
     padding: 10px;
     border-radius: 10px;
@@ -144,16 +133,7 @@ a#five:hover{
     padding: 10px;
     color: white;
 }
-a#one:link, a#one:visited, a#one:focus{
-    padding: 10px;
-    border-radius: 10px;
-    background: white;
-}
-a#one:hover{
-    background: grey;
-    border-radius: 10px;
-    padding: 10px;
-}
+
 img {
     border-width: 1px 1px 1px 1px;
     border-radius: 10px;
