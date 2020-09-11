@@ -15,6 +15,7 @@ header {
 }
 article{
     grid-area: article;
+    grid-column: 2/3;
 }
 h2 {
     font-size: 30px;
