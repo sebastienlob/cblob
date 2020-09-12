@@ -3,32 +3,24 @@ html {
 }
 .container{
     display: grid;
-    grid-template-areas:
-    'header header header';
-    grid-template-columns:1fr 1fr 1fr;
-    
+    grid-template-columns:repeat(12, 1fr);
+    grid-auto-rows: auto;
 }
 
-.content{
-    display: grid;
-    grid-template-areas:
-        '. article .';
-    grid-template-columns:1fr 1fr 1fr;
-}
 header {
-    grid-area: header;
+    grid-column: 4/10;
     text-align: center;
     font-size: 60px;
     padding: 100px, 0px;  
     margin-top: 100px;
 }
 article{
-    grid-area: article;
-
+    grid-column: 5/9;
+    grid-row: 1;
 }
 footer{
-    display:flex;
-    align-items: center;
+    grid-column: 7;
+    grid-row: bottom;
 }
 h2 {
     font-size: 30px;
@@ -147,4 +139,8 @@ img {
     border-width: 1px 1px 1px 1px;
     border-radius: 10px;
     max-width: 100vh;
+}
+.LS {
+    display:inline-flex;
+    grid-column: 1/12;
 }
