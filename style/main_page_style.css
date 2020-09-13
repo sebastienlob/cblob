@@ -170,12 +170,36 @@ img.laptop {
     }
 }*/
 @media screen and (max-width: 1023px){
-
+    .container{
+        display: grid;
+        grid-template-columns:repeat(6, minmax(0,1fr));
+        gap:20px;
+    }
+    .container#project{
+        display: grid;
+        grid-template-columns:repeat(6, 1fr);
+        gap:20px;
+    }
     nav{
         display: inline-flex;
-        grid-column: 1/6;
+        grid-column: 1/7;
         position: sticky;
         top: 0px;
+    }
+    header {
+        grid-column: 2 / 6;
+        grid-row:3/9;
+        text-align: center;
+        font-size: 60px;
+        padding: 100px, 0px;  
+        margin-top: 100px;
+    }
+    article.story{
+        display: grid;
+        grid-column: 2 / 6;
+        grid-row: 2 / 10;
+        align-items: center;
+        align-content: center;
     }
     content#laptop{
         grid-column: 1;
