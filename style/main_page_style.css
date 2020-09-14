@@ -7,40 +7,12 @@ html {
     grid-template-columns:repeat(12, minmax(0,1fr));
     gap:20px;
 }
-/*.container#project{
-display: grid;
-grid-template-areas:
-'a a a a a a a a b b b b b b b b'
-'c c c c d d d d e e e e f f f f'
-'c c c c d d d d e e e e f f f f'
-'c c c c d d d d e e e e f f f f'
-'g g g g h h h h i i i i j j j j'
-'g g g g h h h h i i i i j j j j'
-'g g g g h h h h i i i i j j j j'
-'k k k k k k k k l l l l l l l l';
-gap: 20px;
-}*/
-/*.container#project{
-    display: flex;
-    align-content: space-around;
-}*/
-/*div#projectarticles{
-    display: inline-flex;
-    align-content: center;
-}*/
-/*div#projectarticles{
-    display: grid;
-    grid-template-columns:repeat(12, 1fr);
-    gap:20px;
-}*/
 div.project#articles{
     display: flex;
     flex-flow: wrap;
     grid-column: 1 / -1;
 }
 a#laptop{
-    /*grid-column:1;*/
-    /*grid-area: c d;*/
     flex:1;
     margin:10px;
     font-size: 10px;
@@ -50,8 +22,6 @@ a#laptop{
     border-radius: 15px;
 }
 a#fidget{
-    /*grid-column:2;*/
-    /*grid-area: e f;*/
     flex:1;
     margin:10px;
     font-size: 10px;
@@ -61,8 +31,6 @@ a#fidget{
     border-radius: 15px;
 }
 a#drainhose{
-    /*grid-column:3;*/
-    /*grid-area: g h;*/
     flex:1;
     margin:10px;
     font-size: 10px;
@@ -72,8 +40,6 @@ a#drainhose{
     border-radius: 15px;
 }
 a#keyboardholder{
-    /*grid-column:4;*/
-    /*grid-area: i j;*/
     flex:1;
     margin:10px;
     font-size: 10px;
