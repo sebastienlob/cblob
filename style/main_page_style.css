@@ -8,20 +8,23 @@ html {
     gap:20px;
 }
 div.project#articles{
-    display: flex;
+    display: inline-flex;
     flex-flow: wrap;
     grid-column: 4 / 10;
 }
 a#laptop{
     flex:1;
     margin:10px;
+    padding: 10px;
     font-size: 10px;
-    border-radius: 15px;
     box-shadow: 2px 2px gray;
+    border-radius: 15px;
+    border: 1px solid transparent;
 }
 a#fidget{
     flex:1;
     margin:10px;
+    padding: 10px;
     font-size: 10px;
     border-radius: 15px;
     box-shadow: 2px 2px gray;
@@ -29,6 +32,7 @@ a#fidget{
 a#drainhose{
     flex:1;
     margin:10px;
+    padding: 10px;
     font-size: 10px;
     border-radius: 15px;
     box-shadow: 2px 2px gray;
@@ -36,34 +40,38 @@ a#drainhose{
 a#keyboardholder{
     flex:1;
     margin:10px;
+    padding: 10px;
     font-size: 10px;
     border-radius: 15px;
     box-shadow: 2px 2px gray;
 }
 a#laptop:hover{
-    border-style: solid;
     padding: 10px;
-    border-width: 1px;
     border-radius: 15px;
-
+    box-shadow: inset 2px 2px gray;
+    margin: 10px;
+    border: 1px solid;
 }
 a#fidget:hover{
-    border-style: solid;
     padding: 10px;
-    border-width: 1px;
     border-radius: 15px;
+    box-shadow: inset 2px 2px gray;
+    margin: 10px;
+    border: 1px solid;
 }
 a#drainhose:hover{
-    border-style: solid;
     padding: 10px;
-    border-width: 1px;
     border-radius: 15px;
+    box-shadow: inset 2px 2px gray;
+    margin: 10px;
+    border: 1px solid;
 }
 a#keyboardholder:hover{
-    border-style: solid;
     padding: 10px;
-    border-width: 2px;
     border-radius: 15px;
+    box-shadow: inset 2px 2px gray;
+    margin: 10px;
+    border: 1px solid;
 }
 nav{
     display: inline-flex;
