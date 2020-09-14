@@ -12,6 +12,11 @@ div.project#articles{
     flex-flow: wrap;
     grid-column: 4 / 10;
 }
+.travellayout{
+    display: grid;
+    grid-template-columns:repeat(13, minmax(0,1fr));
+    gap:20px;
+}
 a#laptop{
     flex:1;
     margin:10px;
@@ -224,15 +229,15 @@ img.laptop {
     grid-column: 1/12;
 }
 div.pageimage{
-    display:flex;
+    display: inline-flex;
     flex-flow: row wrap;
-    grid-column: 3 / 11;
-    justify-content: space-around;
+    grid-column: 1 / -1;
+    justify-content: space-evenly;
 }
 div.pageimage img{
-    display: flex;
-    
-    width: 20%;
+    margin: 20px;
+    border-radius: 20px;
+
 }
 @media screen and (max-width: 1023px){
     .container{
