@@ -34,8 +34,9 @@ gap: 20px;
     gap:20px;
 }*/
 div.project#articles{
-    display: inline-flex;
-    grid-column: 4;
+    display: flex;
+    flex-flow: wrap;
+    grid-column: 1 / -1;
 }
 a#laptop{
     /*grid-column:1;*/
@@ -117,7 +118,7 @@ article.story{
 
 p.project {
     font-size: 15px;
-    text-align: justify;
+    text-align: center;
     line-height: 2;
 
 }
@@ -199,8 +200,9 @@ img.laptop {
         gap:20px;
     }*/
     div.project#articles{
-        display: inline-flex;
-        grid-column: 1;
+        display: flex;
+        flex-flow: wrap;
+        grid-column: 1 / -1;
     }
     /*.container#project{
         display: grid;
@@ -219,8 +221,14 @@ img.laptop {
         position: sticky;
         top: 0px;
     }
-    nav#project{
+    /*nav#project{
         grid-area: a b;
+        position: sticky;
+        top: 0px;
+    }*/
+    nav{
+        display: inline-flex;
+        grid-column: 1/-1;
         position: sticky;
         top: 0px;
     }
@@ -240,6 +248,7 @@ img.laptop {
     }
     a#laptop{
         /*grid-area: c;*/
+        flex: 1;
         font-size: 10px;
         border-style: solid;
         padding: 10px;
@@ -247,7 +256,8 @@ img.laptop {
         border-radius: 15px;
     }
     a#fidget{
-        grid-area: d;
+        /*grid-area: d;*/
+        flex: 1;
         font-size: 10px;
         border-style: solid;
         padding: 10px;
@@ -255,7 +265,8 @@ img.laptop {
         border-radius: 15px;
     }
     a#drainhose{
-        grid-area: e;
+        /*grid-area: e;*/
+        flex: 1;
         font-size: 10px;
         border-style: solid;
         padding: 10px;
@@ -263,7 +274,8 @@ img.laptop {
         border-radius: 15px;
     }
     a#keyboardholder{
-        grid-area: f;
+        /*grid-area: f;*/
+        flex: 1;
         font-size: 10px;
         border-style: solid;
         padding: 10px;
