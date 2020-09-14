@@ -1,10 +1,4 @@
 const pageImage = document.querySelector('.pageimage');
-/*const styleTravel = document.createElement('style')
-styleSheet.type = "text/css"
-styleSheet.innerText = styles
-document.head.appendChild(styleSheet)*/
-
-
 
 for (let i = 1; i<=14; i++){
 let sizeArray = [10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34];
