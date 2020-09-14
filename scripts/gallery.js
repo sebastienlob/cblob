@@ -7,7 +7,7 @@ document.head.appendChild(styleSheet)*/
 
 
 for (let i = 1; i<=14; i++){
-let sizeArray = [20, 25, 30, 35, 40, 45];
+let sizeArray = [10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34];
 var randomItem = sizeArray[Math.floor(Math.random()*sizeArray.length)];
 const newImage = document.createElement('img');
 newImage.setAttribute('src', 'image/travels/thailand/IMG'+ i +'.JPG');
