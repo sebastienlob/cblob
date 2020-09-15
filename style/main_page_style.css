@@ -6,6 +6,10 @@ html {
     display: grid;
     grid-template-columns:repeat(13, minmax(0,1fr));
     gap:20px;
+    animation-name: fadeIn;
+    animation-duration: 0.25s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
 }
 div.project#articles{
     display: inline-flex;
@@ -16,6 +20,7 @@ div.project#articles{
     display: grid;
     grid-template-columns:repeat(13, minmax(0,1fr));
     gap:20px;
+
 }
 a#laptop{
     flex:1;
@@ -237,8 +242,35 @@ div.pageimage{
 div.pageimage img{
     margin: 20px;
     border-radius: 20px;
+    animation-name: scaleIn;
+    animation-duration: 1s;
+    transition-timing-function: ease-in;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+      }
+    
+      100% {
+        opacity: 1;
+      }
+    }
+@keyframes scaleIn{
+    0% {
+        width: 0%;
+        height: 0%
+      }
+      30% {
+        width: 30%;
+        height: 30%;
+      }
+      50% {
+        width: 50%;
+        height: 50%;
+      }
 
 }
+  
 @media screen and (max-width: 1023px){
     .container{
         display: grid;
