@@ -238,13 +238,17 @@ div.pageimage{
     flex-flow: row wrap;
     grid-column: 1 / -1;
     justify-content: space-evenly;
+
+
 }
 div.pageimage img{
+    display: inline-block;
     margin: 20px;
     border-radius: 20px;
-    animation-name: scaleIn;
-    animation-duration: 1s;
+    animation-name: fadeInRight;
+    animation-duration: 0.30s;
     transition-timing-function: ease-in;
+    animation-fill-mode: both;
 }
 @keyframes fadeIn {
     0% {
@@ -255,21 +259,28 @@ div.pageimage img{
         opacity: 1;
       }
     }
-@keyframes scaleIn{
+@keyframes fadeInRight {
     0% {
-        width: 0%;
-        height: 0%
-      }
-      30% {
-        width: 30%;
-        height: 30%;
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+    }
+    
+/*@keyframes scaleIn{
+    0%, 100% {
+        width: 100%;
+        height: 100%;
       }
       50% {
         width: 50%;
         height: 50%;
       }
-
-}
+    }*/
   
 @media screen and (max-width: 1023px){
     .container{
