@@ -4,7 +4,7 @@ html {
 }
 .container{
     display: grid;
-    grid-template-columns:repeat(13, minmax(0,1fr));
+    grid-template-columns:repeat(13 minmax(0, 1fr));
     gap:20px;
     animation-name: fadeIn;
     animation-duration: 0.25s;
@@ -30,6 +30,8 @@ a#laptop{
     box-shadow: 2px 2px gray;
     border-radius: 15px;
     border: 1px solid transparent;
+    animation-name: fadeInRight;
+
 }
 a#fidget{
     flex:1;
@@ -38,6 +40,7 @@ a#fidget{
     font-size: 10px;
     border-radius: 15px;
     box-shadow: 2px 2px gray;
+
 }
 a#drainhose{
     flex:1;
@@ -46,6 +49,7 @@ a#drainhose{
     font-size: 10px;
     border-radius: 15px;
     box-shadow: 2px 2px gray;
+
 }
 a#keyboardholder{
     flex:1;
@@ -233,23 +237,46 @@ img.laptop {
 .LS {
     grid-column: 1/12;
 }
-div.pageimage{
-    display: inline-flex;
-    flex-flow: row wrap;
-    grid-column: 1 / -1;
-    justify-content: space-evenly;
+/*page thailande*/
+.pageimage{
+    display: flex;
+    /*grid-template-columns:repeat(17, 113px);
+    grid-template-rows:repeat(10, 108px);*/
+    position: relative;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}   
+    /*.mini{
+        height: 40vh;
+        flex-grow: 1;
+        }*/
+        .thaiImage{
+            margin: 20px;
+            border-radius: 20px;
+            animation-name: fadeInRight;
+            animation-duration: 0.30s;
+            transition-timing-function: ease-in;
+            animation-fill-mode: both;
+        }
+/*zoom sur les photos de la page thailand*/
+/*div.zoomed{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}*/
+        .BTHAI {
+            position: absolute;
+            top: 50;
+            left: 450;
+            /*width: 50%;
+            height: 50%;*/
+            margin: 20px;
+            border-radius: 20px;
+        }
 
-
-}
-div.pageimage img{
-    display: inline-block;
-    margin: 20px;
-    border-radius: 20px;
-    animation-name: fadeInRight;
-    animation-duration: 0.30s;
-    transition-timing-function: ease-in;
-    animation-fill-mode: both;
-}
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -262,7 +289,7 @@ div.pageimage img{
 @keyframes fadeInRight {
     0% {
         opacity: 0;
-        transform: translate3d(100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
     }
     
     100% {
