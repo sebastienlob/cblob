@@ -221,29 +221,31 @@ html {
 /*page thailande*/
 .pageimage{
 display: flex;
-position: relative;
 flex-grow: 1;
 flex-wrap: wrap;
-align-items: center;
 justify-content: space-around;
 }   
     .thaiImage{
         margin: 20px;
         border-radius: 20px;
+        align-items: center;
         animation-name: fadeInRight;
         animation-duration: 0.30s;
         transition-timing-function: ease-in;
         animation-fill-mode: both;
     }
 /*zoom sur les photos de la page thailand*/
-    .zoomed{
-        display: flex;
-        flex-wrap: wrap;
+    .zoomed {
+        display: block;
+        /*position: fixed;*/
+        position: absolute;
+        /*width: 100vw;
+        height: 100vh;*/
+        justify-content: center;
         align-items: center;
-        justify-content: space-around;
+        z-index: 1;
         }
-        .BTHAI {
-            position: absolute;
+        .BTHAI { 
             border-radius: 20px;
         }
 header {
