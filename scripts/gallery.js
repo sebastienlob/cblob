@@ -1,5 +1,6 @@
 const pageImage = document.querySelector('.pageimage');
-const zoomed = document.querySelector('.zoomed');
+const body = document.querySelector('body');
+/*const zoomed = document.querySelector('.zoomed');*/
 const travelLayout = document.querySelector('.travellayout');
 const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
@@ -22,12 +23,15 @@ document.getElementById('IMG' + i).addEventListener('click', zoomIn);
     let ratio = newImage.Height/newImage.width;
     let zoomH = vh*0.75;
     let zoomW = zoomH/ratio;
+    const divZoomed = document.createElement('div')
+    pageImage.appendChild(divZoomed);
+    divZoomed.setAttribute('class', 'zoomed')
     const zoomedImage = document.createElement('img');
     zoomedImage.setAttribute('src', 'image/travels/origin/bthai'+ i +'.JPG');
     zoomedImage.setAttribute('class', 'BTHAI');
     zoomedImage.setAttribute('id', 'BTHAI' + i);
     zoomedImage.setAttribute('width', zoomW);
     zoomedImage.setAttribute('height', zoomH);
-    zoomed.appendChild(zoomedImage);
+    divZoomed.appendChild(zoomedImage);
     }
 }

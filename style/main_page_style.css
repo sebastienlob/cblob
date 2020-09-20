@@ -236,17 +236,17 @@ justify-content: space-around;
     }
 /*zoom sur les photos de la page thailand*/
     .zoomed {
-        display: block;
-        /*position: fixed;*/
-        position: absolute;
-        /*width: 100vw;
-        height: 100vh;*/
-        justify-content: center;
-        align-items: center;
+        display: flex;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
         z-index: 1;
+        background-color: rgba(128,128,128, 0.75);
+        justify-content: center;
         }
         .BTHAI { 
-            border-radius: 20px;
+            align-self: center;
+           border-radius: 20px; 
         }
 header {
     grid-column: 5 / 10;
