@@ -11,7 +11,6 @@ divZoomed.style.visibility = 'hidden';
 function zoomIn (e) {
     const newImage = e.currentTarget;
     var zoomedSrc = e.currentTarget.dataset.bigurl;
-    console.log(zoomedSrc)
     divZoomed.style.visibility = 'visible';
     let ratio = newImage.Height/newImage.width;
     let zoomH = vh*0.75;
@@ -28,7 +27,6 @@ function zoomIn (e) {
 /* fonction pour fermer l'image zoomée */
 function quitZoom (){
     divZoomed.style.visibility = 'hidden';
-
 }
 
 /* pour afficher l'ensemble des images avec une taille aléatoire dans la page */
@@ -38,10 +36,10 @@ for (let i = 1; i<=14; i++){
     const newImage = document.createElement('img');
     newImage.setAttribute('src', 'image/travels/thailand/thai'+ i +'.JPG');
     newImage.setAttribute('data-bigurl', 'image/travels/thailand/othai'+ i +'.JPG');
-    newImage.setAttribute('class', 'thaiImage');
+    newImage.setAttribute('class', 'image');
     newImage.setAttribute('width', randomItem + '%');
     newImage.setAttribute('height', randomItem + '%');
-    newImage.setAttribute('id', 'IMG' + i);
+    /*newImage.setAttribute('id', 'IMG' + i);*/
     pageImage.appendChild(newImage);
     newImage.addEventListener('click', zoomIn);
 }

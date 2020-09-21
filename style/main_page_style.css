@@ -233,40 +233,56 @@ html {
         outline: none;
         text-decoration: none;
         }
-/*page thailande*/
-.pageimage{
-display: flex;
-flex-grow: 1;
-flex-wrap: wrap;
-justify-content: space-around;
-}   
-    .thaiImage{
-        margin: 20px;
-        border-radius: 20px;
-        align-items: center;
-        animation-name: fadeInRight;
-        animation-duration: 0.30s;
-        transition-timing-function: ease-in;
-        animation-fill-mode: both;
-    }
+    /*page galerie*/
+    .pageimage{
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    }   
+        .image{
+            margin: 20px;
+            border-radius: 20px;
+            align-items: center;
+            box-shadow: 10px 10px 9px 0px rgba(128,121,128,0.6);
+            animation-name: fadeInRight;
+            animation-duration: 0.30s;
+            transition-timing-function: ease-in;
+            animation-fill-mode: both;
+        }
 /*zoom sur les photos de la page thailand*/
     .zoomed {
         display: flex;
         position: fixed;
         width: 100vw;
         height: 100vh;
-        z-index: 1;
+        z-index: 2;
         background-color: rgba(128,128,128, 0.75);
         justify-content: center;
         }
         .BTHAI { 
-            align-self: center;
-           border-radius: 20px; 
+           align-self: center;
+           border-radius: 20px;
+           animation-name: fadeIn;
+           animation-duration: 0.30s;
+           transition-timing-function: ease-in;
+           animation-fill-mode: both;
         }
+        .NEWYORK { 
+            align-self: center;
+            border-radius: 20px;
+            animation-name: fadeIn;
+            animation-duration: 0.30s;
+            transition-timing-function: ease-in;
+            animation-fill-mode: both;
+         }
         .X {
             position: absolute;
             top: 5;
             right:10;
+        }
+        .X:hover {
+            box-shadow: inset 2px 2px
         }
 header {
     grid-column: 5 / 10;
