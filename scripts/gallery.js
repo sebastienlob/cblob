@@ -2,6 +2,7 @@ const pageImage = document.querySelector('.pageimage');
 const body = document.querySelector('body');
 const divZoomed = document.querySelector('.zoomed');
 const zoomedImage = document.querySelector('.BTHAI');
+const X = document.querySelector('.X');
 const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
 divZoomed.style.visibility = 'hidden';
@@ -18,9 +19,17 @@ function zoomIn (e) {
     zoomedImage.setAttribute('src', zoomedSrc);
     zoomedImage.setAttribute('width', zoomW);
     zoomedImage.setAttribute('height', zoomH);
+    X.setAttribute('src', 'image/travels/thailand/X2.png')
     divZoomed.appendChild(zoomedImage);
+    divZoomed.appendChild(X);
+    X.addEventListener('click', quitZoom);
     }
 
+/* fonction pour fermer l'image zoomée */
+function quitZoom (){
+    divZoomed.style.visibility = 'hidden';
+
+}
 
 /* pour afficher l'ensemble des images avec une taille aléatoire dans la page */
 for (let i = 1; i<=14; i++){
