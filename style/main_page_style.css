@@ -276,6 +276,14 @@ html {
             transition-timing-function: ease-in;
             animation-fill-mode: both;
          }
+         .LOUIS { 
+            align-self: center;
+            border-radius: 20px;
+            animation-name: fadeIn;
+            animation-duration: 0.30s;
+            transition-timing-function: ease-in;
+            animation-fill-mode: both;
+         }
         .X {
             position: absolute;
             top: 5;
