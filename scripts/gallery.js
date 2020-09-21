@@ -9,7 +9,7 @@ divZoomed.style.visibility = 'hidden';
 /* fonction pour zoomer l'image qui a été clickée */
 function zoomIn (e) {
     const newImage = e.currentTarget;
-    var zoomedSrc = e.currentTarget.src;
+    var zoomedSrc = e.currentTarget.dataset.bigurl;
     console.log(zoomedSrc)
     divZoomed.style.visibility = 'visible';
     let ratio = newImage.Height/newImage.width;
@@ -27,7 +27,8 @@ for (let i = 1; i<=14; i++){
     let sizeArray = [12, 14, 16, 18, 20];
     var randomItem = sizeArray[Math.floor(Math.random()*sizeArray.length)];
     const newImage = document.createElement('img');
-    newImage.setAttribute('src', 'image/travels/thailand/othai'+ i +'.JPG');
+    newImage.setAttribute('src', 'image/travels/thailand/thai'+ i +'.JPG');
+    newImage.setAttribute('data-bigurl', 'image/travels/thailand/othai'+ i +'.JPG');
     newImage.setAttribute('class', 'thaiImage');
     newImage.setAttribute('width', randomItem + '%');
     newImage.setAttribute('height', randomItem + '%');
