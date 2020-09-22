@@ -169,7 +169,7 @@ html {
             border: 1px solid;
             border-color: rgba(255,255,255);
         }
-        a.travels#france {
+        a.travels#cabin {
             margin: 50px;
             padding: 10px;
             border-radius: 15px;
@@ -200,7 +200,7 @@ html {
             margin: 50px;
             border: 1px solid;
         }
-        a.travels#france:hover {
+        a.travels#cabin:hover {
             padding: 10px;
             border-radius: 15px;
             box-shadow: inset 2px 2px gray;
@@ -277,6 +277,14 @@ html {
             animation-fill-mode: both;
          }
          .LOUIS { 
+            align-self: center;
+            border-radius: 20px;
+            animation-name: fadeIn;
+            animation-duration: 0.30s;
+            transition-timing-function: ease-in;
+            animation-fill-mode: both;
+         }
+         .CAB { 
             align-self: center;
             border-radius: 20px;
             animation-name: fadeIn;
