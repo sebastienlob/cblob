@@ -300,6 +300,14 @@ html {
         .X:hover {
             box-shadow: inset 2px 2px
         }
+        .rarrow {
+            position: absolute;
+            top: 50vh;
+            right:10;
+        }
+        .rarrow:hover {
+            box-shadow: inset 2px 2px
+        }
 header {
     grid-column: 5 / 10;
     grid-row:3/9;
