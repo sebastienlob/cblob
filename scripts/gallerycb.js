@@ -37,7 +37,7 @@ function quitZoom (){
 
 function scrollRight () {
     let zoomedSrc = zoomedImage.src;
-    let j = zoomedSrc[28];
+    let j = zoomedSrc[43];
     console.log(zoomedSrc);
     console.log(j);
     /*zoomedImage.setAttribute('src', 'image/travels/cabin/ocab'+ j +'.JPG');
