@@ -35,13 +35,16 @@ function quitZoom (){
 
 /* fonction pour faire deffiler les images vers la droite */
 
-function scrollRight () {
-    let zoomedSrc = zoomedImage.src;
-    let j = zoomedSrc[43];
-    console.log(zoomedSrc);
-    console.log(j);
-    /*zoomedImage.setAttribute('src', 'image/travels/cabin/ocab'+ j +'.JPG');
-    divZoomed.appendChild(zoomedImage);*/
+function scrollRight (f) {
+    const newImage = f.currentTarget;
+    let zoomedSrc = f.currentTarget.dataset.url;
+    /*let j = zoomedSrc[63];*/
+    /*let j = zoomedSrc[43];*/
+    /*console.log(zoomedSrc);
+    console.log(j);*/
+    let nextZoomedImageSrc = 'image/travels/cabin/ocab'+ j +'.JPG';
+    zoomedImage.setAttribute('src', zoomedSrc+ j +'.JPG');
+    divZoomed.appendChild(zoomedImage);
 }
 
 /* pour afficher l'ensemble des images avec une taille aléatoire dans la page */
@@ -51,6 +54,7 @@ for (let i = 1; i<=12; i++){
     const newImage = document.createElement('img');
     newImage.setAttribute('src', 'image/travels/cabin/cab'+ i +'.JPG');
     newImage.setAttribute('data-bigurl', 'image/travels/cabin/ocab'+ i +'.JPG');
+    newImage.setAttribute('data-url', 'image/travels/cabin/ocab');
     newImage.setAttribute('class', 'image');
     newImage.setAttribute('width', randomItem + '%');
     newImage.setAttribute('height', randomItem + '%');
