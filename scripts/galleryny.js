@@ -46,7 +46,7 @@ function scrollRight () {
         var zoomedNext = zoomedSrcPart + i + '.JPG';
         zoomedImage.setAttribute('src', zoomedNext);
         divZoomed.appendChild(zoomedImage);
-        }else {
+        }else { 
         zoomedImage.setAttribute('src', 'image/travels/newyork/onewyork1.JPG');
         divZoomed.appendChild(zoomedImage);
         }
