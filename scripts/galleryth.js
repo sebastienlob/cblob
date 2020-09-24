@@ -22,7 +22,7 @@ function zoomIn (e) {
     zoomedImage.setAttribute('height', zoomH);
     X.setAttribute('src', 'image/travels/thailand/X2.png')
     rArrow.setAttribute('src', 'image/travels/thailand/rarrow.png');
-    lArrow.setAttribute('src', 'image/travels/thailand/larrow.png')
+    lArrow.setAttribute('src', 'image/travels/thailand/larrow.png');
     divZoomed.appendChild(zoomedImage);
     X.addEventListener('click', quitZoom);
     rArrow.addEventListener('click', scrollRight);

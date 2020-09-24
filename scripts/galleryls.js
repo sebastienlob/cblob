@@ -4,6 +4,7 @@ const divZoomed = document.querySelector('.zoomed');
 const zoomedImage = document.querySelector('.LOUIS');
 const X = document.querySelector('.X');
 const rArrow = document.querySelector('.rarrow')
+const lArrow = document.querySelector('.larrow')
 const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
 divZoomed.style.visibility = 'hidden';
@@ -21,11 +22,11 @@ function zoomIn (e) {
     zoomedImage.setAttribute('height', zoomH);
     X.setAttribute('src', 'image/travels/louisiana/X2.png');
     rArrow.setAttribute('src', 'image/travels/louisiana/rarrow.png');
+    lArrow.setAttribute('src', 'image/travels/thailand/larrow.png');
     divZoomed.appendChild(zoomedImage);
-    divZoomed.appendChild(X);
-    divZoomed.appendChild(rArrow);
     X.addEventListener('click', quitZoom);
     rArrow.addEventListener('click', scrollRight);
+    lArrow.addEventListener('click', scrollLeft);
     }
 
 /* fonction pour fermer l'image zoomée */
@@ -38,7 +39,7 @@ function quitZoom (){
 function scrollRight () {
     var zoomedSrcPart = 'image/travels/louisiana/olouis';
     var zoomedSrc = zoomedImage.src;
-    var j = zoomedSrc.slice(69,71);
+    var j = zoomedSrc.slice(49,51);
     var k = parseInt(j, 10);
     if (k<=9){
         var i = k+1;
@@ -46,7 +47,7 @@ function scrollRight () {
         zoomedImage.setAttribute('src', zoomedNext);
         divZoomed.appendChild(zoomedImage);
     } else if (k>=10 && k<14){
-        var l = zoomedSrc.slice(69,71);
+        var l = zoomedSrc.slice(49,51);
         var m = parseInt(l, 10);
         var n = m+1;
         if (n>=10 && n<14) {
@@ -59,6 +60,29 @@ function scrollRight () {
         }
     }
 }
+
+/* fonction pour faire defiler les images vers la gauche */
+
+function scrollLeft () {
+    var zoomedSrcPart = 'image/travels/louisiana/olouis';
+    var zoomedSrc = zoomedImage.src;
+    var j = zoomedSrc.slice(49,51);
+    var k = parseInt(j, 10);
+    if (k<=1){
+        zoomedImage.setAttribute('src', 'image/travels/louisiana/olouis13.JPG');
+        divZoomed.appendChild(zoomedImage);
+    } else if (k >1 && k<=13){
+        var l = zoomedSrc.slice(49,51);
+        var m = parseInt(l, 10);
+        var n = m-1;
+        var zoomedNext = zoomedSrcPart + n + '.JPG';
+        zoomedImage.setAttribute('src', zoomedNext);
+        divZoomed.appendChild(zoomedImage);
+        }else {
+        zoomedImage.setAttribute('src', 'image/travels/louisiana/olouis1.JPG');
+        divZoomed.appendChild(zoomedImage);
+        }
+    }
 
 /* fonction pour fermer l'image zoomée */
 function quitZoom (){
