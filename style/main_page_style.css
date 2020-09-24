@@ -308,6 +308,14 @@ html {
         .rarrow:hover {
             box-shadow: inset 2px 2px
         }
+        .larrow {
+            position: absolute;
+            top: 50vh;
+            right:calc(100vw - 25px);
+        }
+        .larrow:hover {
+            box-shadow: inset 2px 2px
+        }
 /* formulaire de la page contact */
 form {
     /* Center the form on the page */

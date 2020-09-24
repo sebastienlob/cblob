@@ -4,6 +4,7 @@ const divZoomed = document.querySelector('.zoomed');
 const zoomedImage = document.querySelector('.BTHAI');
 const X = document.querySelector('.X');
 const rArrow = document.querySelector('.rarrow')
+const lArrow = document.querySelector('.larrow')
 const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
 divZoomed.style.visibility = 'hidden';
@@ -21,10 +22,11 @@ function zoomIn (e) {
     zoomedImage.setAttribute('height', zoomH);
     X.setAttribute('src', 'image/travels/thailand/X2.png')
     rArrow.setAttribute('src', 'image/travels/thailand/rarrow.png');
+    lArrow.setAttribute('src', 'image/travels/thailand/larrow.png')
     divZoomed.appendChild(zoomedImage);
-    divZoomed.appendChild(X);
     X.addEventListener('click', quitZoom);
     rArrow.addEventListener('click', scrollRight);
+    lArrow.addEventListener('click', scrollLeft);
     }
 
 /* fonction pour fermer l'image zoomée */
@@ -59,6 +61,29 @@ function scrollRight () {
         }
     }
 }
+
+/* fonction pour faire defiler les images vers la gauche */
+
+function scrollLeft () {
+    var zoomedSrcPart = 'image/travels/thailand/othai';
+    var zoomedSrc = zoomedImage.src;
+    var j = zoomedSrc.slice(47,49);
+    var k = parseInt(j, 10);
+    if (k<=1){
+        zoomedImage.setAttribute('src', 'image/travels/thailand/othai14.JPG');
+        divZoomed.appendChild(zoomedImage);
+    } else if (k >1 && k<=14){
+        var l = zoomedSrc.slice(47,49);
+        var m = parseInt(l, 10);
+        var n = m-1;
+        var zoomedNext = zoomedSrcPart + n + '.JPG';
+        zoomedImage.setAttribute('src', zoomedNext);
+        divZoomed.appendChild(zoomedImage);
+        }else {
+        zoomedImage.setAttribute('src', 'image/travels/cabin/ocab1.JPG');
+        divZoomed.appendChild(zoomedImage);
+        }
+    }
 
 /* pour afficher l'ensemble des images avec une taille aléatoire dans la page */
 for (let i = 1; i<=14; i++){
