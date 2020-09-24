@@ -37,6 +37,7 @@ function quitZoom (){
 function scrollRight () {
     var zoomedSrcPart = 'image/travels/thailand/othai';
     var zoomedSrc = zoomedImage.src;
+    console.log(zoomedSrc);
     var j = zoomedSrc.slice(47,49);
     var k = parseInt(j, 10);
     if (k<=9){
