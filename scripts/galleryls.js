@@ -3,6 +3,7 @@ const body = document.querySelector('body');
 const divZoomed = document.querySelector('.zoomed');
 const zoomedImage = document.querySelector('.LOUIS');
 const X = document.querySelector('.X');
+const rArrow = document.querySelector('.rarrow')
 const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
 divZoomed.style.visibility = 'hidden';
@@ -18,11 +19,46 @@ function zoomIn (e) {
     zoomedImage.setAttribute('src', zoomedSrc);
     zoomedImage.setAttribute('width', zoomW);
     zoomedImage.setAttribute('height', zoomH);
-    X.setAttribute('src', 'image/travels/louisiana/X2.png')
+    X.setAttribute('src', 'image/travels/louisiana/X2.png');
+    rArrow.setAttribute('src', 'image/travels/louisiana/rarrow.png');
     divZoomed.appendChild(zoomedImage);
     divZoomed.appendChild(X);
+    divZoomed.appendChild(rArrow);
     X.addEventListener('click', quitZoom);
+    rArrow.addEventListener('click', scrollRight);
     }
+
+/* fonction pour fermer l'image zoomée */
+function quitZoom (){
+    divZoomed.style.visibility = 'hidden';
+}
+
+/* fonction pour faire deffiler les images vers la droite */
+
+function scrollRight () {
+    var zoomedSrcPart = 'image/travels/louisiana/olouis';
+    var zoomedSrc = zoomedImage.src;
+    var j = zoomedSrc.slice(69,71);
+    var k = parseInt(j, 10);
+    if (k<=9){
+        var i = k+1;
+        var zoomedNext = zoomedSrcPart + i + '.JPG';
+        zoomedImage.setAttribute('src', zoomedNext);
+        divZoomed.appendChild(zoomedImage);
+    } else if (k>=10 && k<14){
+        var l = zoomedSrc.slice(69,71);
+        var m = parseInt(l, 10);
+        var n = m+1;
+        if (n>=10 && n<14) {
+        var zoomedNext = zoomedSrcPart + n + '.JPG';
+        zoomedImage.setAttribute('src', zoomedNext);
+        divZoomed.appendChild(zoomedImage);
+        }else {
+        zoomedImage.setAttribute('src', 'image/travels/louisiana/olouis1.JPG');
+        divZoomed.appendChild(zoomedImage);
+        }
+    }
+}
 
 /* fonction pour fermer l'image zoomée */
 function quitZoom (){

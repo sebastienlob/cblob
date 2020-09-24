@@ -35,16 +35,31 @@ function quitZoom (){
 
 /* fonction pour faire deffiler les images vers la droite */
 
-function scrollRight (f) {
-    const newImage = f.currentTarget;
-    let zoomedSrc = f.currentTarget.dataset.url;
-    /*let j = zoomedSrc[63];*/
-    /*let j = zoomedSrc[43];*/
-    /*console.log(zoomedSrc);
-    console.log(j);*/
-    let nextZoomedImageSrc = 'image/travels/cabin/ocab'+ j +'.JPG';
-    zoomedImage.setAttribute('src', zoomedSrc+ j +'.JPG');
-    divZoomed.appendChild(zoomedImage);
+function scrollRight () {
+    var zoomedSrcPart = 'image/travels/cabin/ocab';
+    var zoomedSrc = zoomedImage.src;
+    var j = zoomedSrc.slice(63,65);
+    console.log(j);
+    var k = parseInt(j, 10);
+    console.log(k);
+    if (k<=9){
+        var i = k+1;
+        var zoomedNext = zoomedSrcPart + i + '.JPG';
+        zoomedImage.setAttribute('src', zoomedNext);
+        divZoomed.appendChild(zoomedImage);
+    } else if (k>=10 && k<13){
+        var l = zoomedSrc.slice(63,65);
+        var m = parseInt(l, 10);
+        var n = m+1;
+        if (n>=10 && n<13) {
+        var zoomedNext = zoomedSrcPart + n + '.JPG';
+        zoomedImage.setAttribute('src', zoomedNext);
+        divZoomed.appendChild(zoomedImage);
+        }else {
+        zoomedImage.setAttribute('src', 'image/travels/cabin/ocab1.JPG');
+        divZoomed.appendChild(zoomedImage);
+        }
+    }
 }
 
 /* pour afficher l'ensemble des images avec une taille aléatoire dans la page */
@@ -54,7 +69,6 @@ for (let i = 1; i<=12; i++){
     const newImage = document.createElement('img');
     newImage.setAttribute('src', 'image/travels/cabin/cab'+ i +'.JPG');
     newImage.setAttribute('data-bigurl', 'image/travels/cabin/ocab'+ i +'.JPG');
-    newImage.setAttribute('data-url', 'image/travels/cabin/ocab');
     newImage.setAttribute('class', 'image');
     newImage.setAttribute('width', randomItem + '%');
     newImage.setAttribute('height', randomItem + '%');
