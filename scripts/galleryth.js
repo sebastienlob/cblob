@@ -37,7 +37,7 @@ function quitZoom (){
 function scrollRight () {
     var zoomedSrcPart = 'image/travels/thailand/othai';
     var zoomedSrc = zoomedImage.src;
-    var j = zoomedSrc.slice(67,69);
+    var j = zoomedSrc.slice(47,49);
     var k = parseInt(j, 10);
     if (k<=9){
         var i = k+1;
@@ -45,7 +45,7 @@ function scrollRight () {
         zoomedImage.setAttribute('src', zoomedNext);
         divZoomed.appendChild(zoomedImage);
     } else if (k>=10 && k<14){
-        var l = zoomedSrc.slice(67,69);
+        var l = zoomedSrc.slice(47,49);
         var m = parseInt(l, 10);
         var n = m+1;
         if (n>=10 && n<14) {
