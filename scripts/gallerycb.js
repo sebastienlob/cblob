@@ -1,102 +1,76 @@
 const pageImage = document.querySelector('.pageimage');
 const body = document.querySelector('body');
-const divZoomed = document.querySelector('.zoomed');
-const zoomedImage = document.querySelector('.CAB');
+const divZoomed = document.querySelector('.hidden');
 const X = document.querySelector('.X');
-const rArrow = document.querySelector('.rarrow')
-const lArrow = document.querySelector('.larrow')
+const rArrow = document.querySelector('.rarrow');
+const lArrow = document.querySelector('.larrow');
+const zoomedImage = document.querySelector('.zoomedImage')
+const image = document.querySelectorAll('.image')
+/*const index = [1,2,3,4,5,6,7,8,9,10,11,12];*/
 const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
-divZoomed.style.visibility = 'hidden';
+/* essaie de creer un tableau */
+/*const image = 12;*/
+/*const images = [{vignette: 'image/travels/cabin/cab1.JPG', big: 'image/travels/cabin/ocab1.JPG'},
+                {vignette: 'image/travels/cabin/cab2.JPG', big: 'image/travels/cabin/ocab2.JPG'},
+                {vignette: 'image/travels/cabin/cab3.JPG', big: 'image/travels/cabin/ocab3.JPG'},
+                {vignette: 'image/travels/cabin/cab4.JPG', big: 'image/travels/cabin/ocab4.JPG'},
+                {vignette: 'image/travels/cabin/cab5.JPG', big: 'image/travels/cabin/ocab5.JPG'},
+                {vignette: 'image/travels/cabin/cab6.JPG', big: 'image/travels/cabin/ocab6.JPG'},
+                {vignette: 'image/travels/cabin/cab7.JPG', big: 'image/travels/cabin/ocab7.JPG'},
+                {vignette: 'image/travels/cabin/cab8.JPG', big: 'image/travels/cabin/ocab8.JPG'},
+                {vignette: 'image/travels/cabin/cab9.JPG', big: 'image/travels/cabin/ocab9.JPG'},
+                {vignette: 'image/travels/cabin/cab10.JPG', big: 'image/travels/cabin/ocab10.JPG'},
+                {vignette: 'image/travels/cabin/cab11.JPG', big: 'image/travels/cabin/ocab11.JPG'},
+                {vignette: 'image/travels/cabin/cab12.JPG', big: 'image/travels/cabin/ocab12.JPG'},]*/
 
-/* fonction pour zoomer l'image qui a été clickée */
-function zoomIn (e) {
-    const newImage = e.currentTarget;
-    var zoomedSrc = e.currentTarget.dataset.bigurl;
-    divZoomed.style.visibility = 'visible';
-    let ratio = newImage.Height/newImage.width;
-    let zoomH = vh*0.75;
-    let zoomW = zoomH/ratio;
-    zoomedImage.setAttribute('src', zoomedSrc);
-    zoomedImage.setAttribute('width', zoomW);
-    zoomedImage.setAttribute('height', zoomH);
-    X.setAttribute('src', 'image/travels/cabin/X2.png')
-    rArrow.setAttribute('src', 'image/travels/cabin/rarrow.png')
-    lArrow.setAttribute('src', 'image/travels/cabin/larrow.png')
-    divZoomed.appendChild(zoomedImage);
-    X.addEventListener('click', quitZoom);
-    rArrow.addEventListener('click', scrollRight);
-    lArrow.addEventListener('click', scrollLeft);
-    }
-
-/* fonction pour fermer l'image zoomée */
-function quitZoom (){
-    divZoomed.style.visibility = 'hidden';
-}
-
-/* fonction pour faire defiler les images vers la droite */
-
-function scrollRight () {
-    var zoomedSrcPart = 'image/travels/cabin/ocab';
-    var zoomedSrc = zoomedImage.src;
-    /*var j = zoomedSrc.slice(63,65);*/
-    var j = zoomedSrc.slice(43,45);
-    console.log(j);
-    var k = parseInt(j, 10);
-    console.log(k);
-    if (k<=9){
-        var i = k+1;
-        var zoomedNext = zoomedSrcPart + i + '.JPG';
-        zoomedImage.setAttribute('src', zoomedNext);
-        divZoomed.appendChild(zoomedImage);
-    } else if (k>=10 && k<13){
-        var l = zoomedSrc.slice(43,45);
-        var m = parseInt(l, 10);
-        var n = m+1;
-        if (n>=10 && n<13) {
-        var zoomedNext = zoomedSrcPart + n + '.JPG';
-        zoomedImage.setAttribute('src', zoomedNext);
-        divZoomed.appendChild(zoomedImage);
-        }else {
-        zoomedImage.setAttribute('src', 'image/travels/cabin/ocab1.JPG');
-        divZoomed.appendChild(zoomedImage);
-        }
-    }
-}
-
-/* fonction pour faire defiler les images vers la gauche */
-
-function scrollLeft () {
-    var zoomedSrcPart = 'image/travels/cabin/ocab';
-    var zoomedSrc = zoomedImage.src;
-    var j = zoomedSrc.slice(43,45);
-    var k = parseInt(j, 10);
-    if (k<=1){
-        zoomedImage.setAttribute('src', 'image/travels/cabin/ocab12.JPG');
-        divZoomed.appendChild(zoomedImage);
-    } else if (k >1 && k<=12){
-        var l = zoomedSrc.slice(43,45);
-        var m = parseInt(l, 10);
-        var n = m-1;
-        var zoomedNext = zoomedSrcPart + n + '.JPG';
-        zoomedImage.setAttribute('src', zoomedNext);
-        divZoomed.appendChild(zoomedImage);
-        }else {
-        zoomedImage.setAttribute('src', 'image/travels/cabin/ocab1.JPG');
-        divZoomed.appendChild(zoomedImage);
-        }
-    }
 
 /* pour afficher l'ensemble des images avec une taille aléatoire dans la page */
-for (let i = 1; i<=12; i++){
+/*for (let i = 1; i<=12; i++){
+    const vignette = document.getElementById(`cab${i}`);
     let sizeArray = [12, 14, 16, 18, 20];
-    var randomItem = sizeArray[Math.floor(Math.random()*sizeArray.length)];
-    const newImage = document.createElement('img');
-    newImage.setAttribute('src', 'image/travels/cabin/cab'+ i +'.JPG');
-    newImage.setAttribute('data-bigurl', 'image/travels/cabin/ocab'+ i +'.JPG');
-    newImage.setAttribute('class', 'image');
-    newImage.setAttribute('width', randomItem + '%');
-    newImage.setAttribute('height', randomItem + '%');
-    pageImage.appendChild(newImage);
-    newImage.addEventListener('click', zoomIn);
+    const randomItem = sizeArray[Math.floor(Math.random()*sizeArray.length)];
+    vignette.setAttribute('width', randomItem + '%');
+    vignette.setAttribute('height', randomItem + '%');
+}*/
+X.addEventListener('click', zoomOut);
+rArrow.addEventListener('click', next);
+for (let i=0; i<=11; i++){
+    image[i].addEventListener('click', placeZoomed);
+}
+
+/*for (let i = 1; i<=12; i++) {
+    let vignette = document.createElement('img');
+    vignette.setAttribute('src',`image/travels/cabin/cab${i}.JPG`)
+    vignette.setAttribute('data-index', i)
+    vignette.setAttribute('class', 'image')
+    vignette.setAttribute('width', '301');
+    vignette.setAttribute('height', '201');
+    pageImage.appendChild(vignette);
+    vignette.addEventListener('click', placeZoomed);
+}*/
+
+/* fonction pour creer l'image zoomee de la vignette qui a ete clickee */
+function placeZoomed(e) {
+    let Index = e.target.dataset.index
+    divZoomed.setAttribute('class', 'show');
+    let ratio = 0.66;
+    let zoomH = vh*0.75;
+    let zoomW = zoomH/ratio;
+    zoomedImage.setAttribute('src', `image/travels/cabin/ocab${Index}.JPG`);
+    zoomedImage.setAttribute('width', zoomW);
+    zoomedImage.setAttribute('height', zoomH);
+}
+
+function zoomOut () {
+    divZoomed.setAttribute('class', 'hidden');
+}
+
+function next () {
+    console.log(image);
+    let indexNext = image[0].dataset.index;
+    parseInt(indexNext, 10);
+    indexNext += indexNext;
+    console.log(indexNext);
+    zoomedImage.setAttribute('src', `image/travels/cabin/ocab${indexNext}.JPG`);
 }

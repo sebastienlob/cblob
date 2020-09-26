@@ -251,15 +251,19 @@ html {
             animation-fill-mode: both;
         }
 /*zoom sur les photos de la page thailand*/
-    .zoomed {
-        display: flex;
+    .hidden {
+        display: none;
+        }
+
+    .show {
         position: fixed;
+        position: absolute;
         width: 100vw;
         height: 100vh;
         z-index: 2;
         background-color: rgba(128,128,128, 0.75);
         justify-content: center;
-        }
+    }
         .BTHAI { 
            align-self: center;
            border-radius: 20px;
