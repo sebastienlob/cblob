@@ -236,16 +236,12 @@ html {
     /*page galerie*/
     .vignette{
     display: block;
-    /*flex-grow: 1;
-    flex-wrap: wrap;
-    justify-content: space-around;*/
     }   
         .imageSmall{
             margin: 20px;
             border-radius: 20px;
             align-items: center;
             block-size: 100px;
-            /*width: 15%;*/
             box-shadow: 10px 10px 9px 0px rgba(128,121,128,0.6);
             animation-name: fadeInRight;
             animation-duration: 0.30s;
@@ -259,69 +255,41 @@ html {
 
     .zoomed {
         display: flex;
-        justify-content: center;
-        /*width: 100vw;
-        height: 100vh;
-        z-index: 2;*/
+        justify-content: space-around;
     }
         .image { 
-           block-size: 500px;
-           /*justify-self: center;
-           align-self: center;*/
+           block-size: 750px;
            border-radius: 20px;
            animation-name: fadeIn;
            animation-duration: 0.30s;
            transition-timing-function: ease-in;
            animation-fill-mode: both;
         }
-        /*.NEWYORK { 
+
+        .rArrow {
+            justify-self:flex-start;
             align-self: center;
-            border-radius: 20px;
-            animation-name: fadeIn;
-            animation-duration: 0.30s;
-            transition-timing-function: ease-in;
-            animation-fill-mode: both;
-         }
-         .LOUIS { 
+        }
+        .rArrow:hover {
+            box-shadow: inset 2px 2px
+        }
+        .lArrow {
+            justify-self: flex-start;
             align-self: center;
-            border-radius: 20px;
-            animation-name: fadeIn;
-            animation-duration: 0.30s;
-            transition-timing-function: ease-in;
-            animation-fill-mode: both;
-         }
-         .CAB { 
-            align-self: center;
-            border-radius: 20px;
-            animation-name: fadeIn;
-            animation-duration: 0.30s;
-            transition-timing-function: ease-in;
-            animation-fill-mode: both;
-         }
-        .X {
+        }
+        .lArrow:hover {
+            box-shadow: inset 2px 2px
+        }
+        .close {
             position: absolute;
             top: 5;
             right:10;
         }
-        .X:hover {
+        .close:hover {
             box-shadow: inset 2px 2px
         }
-        .rarrow {
-            position: absolute;
-            top: 50vh;
-            right:10;
-        }
-        .rarrow:hover {
-            box-shadow: inset 2px 2px
-        }
-        .larrow {
-            position: absolute;
-            top: 50vh;
-            right:calc(100vw - 25px);
-        }
-        .larrow:hover {
-            box-shadow: inset 2px 2px
-        }*/
+
+
 /* formulaire de la page contact */
 form {
     /* Center the form on the page */
