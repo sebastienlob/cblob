@@ -252,29 +252,29 @@ html {
             transition-timing-function: ease-in;
             animation-fill-mode: both;
         }
-/*zoom sur les photos de la page thailand
-    .hidden {
+/*zoom sur les photos de la page thailand*/
+    .zoomed.hidden {
         display: none;
         }
 
-    .show {
-        position: fixed;
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
-        z-index: 2;
-        background-color: rgba(128,128,128, 0.75);
+    .zoomed {
+        display: flex;
         justify-content: center;
+        /*width: 100vw;
+        height: 100vh;
+        z-index: 2;*/
     }
-        .BTHAI { 
-           align-self: center;
+        .image { 
+           block-size: 500px;
+           /*justify-self: center;
+           align-self: center;*/
            border-radius: 20px;
            animation-name: fadeIn;
            animation-duration: 0.30s;
            transition-timing-function: ease-in;
            animation-fill-mode: both;
         }
-        .NEWYORK { 
+        /*.NEWYORK { 
             align-self: center;
             border-radius: 20px;
             animation-name: fadeIn;
