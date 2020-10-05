@@ -199,6 +199,7 @@ html {
             box-shadow: inset 5px 5px 2px 0px rgba(128,121,128,0.6);
             margin: 50px;
             border: 1px solid;
+            border-color: rgba(255,255,255);
         }
         a.travels#cabin:hover {
             padding: 10px;
@@ -206,6 +207,7 @@ html {
             box-shadow: inset 5px 5px 2px 0px rgba(128,121,128,0.6);
             margin: 50px;
             border: 1px solid;
+            border-color: rgba(255,255,255);
         }
         a.travels#louisiana:hover {
             padding: 10px;
@@ -213,6 +215,7 @@ html {
             box-shadow: inset 5px 5px 2px 0px rgba(128,121,128,0.6);
             margin: 50px;
             border: 1px solid;
+            border-color: rgba(255,255,255);
         }
         a.travels#newyork:hover {
             padding: 10px;
@@ -220,6 +223,7 @@ html {
             box-shadow: inset 5px 5px 2px 0px rgba(128,121,128,0.6);
             margin: 50px;
             border: 1px solid;
+            border-color: rgba(255,255,255);
         }
         p.travels {
             font-size: 15px;
