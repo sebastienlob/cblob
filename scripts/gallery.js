@@ -79,6 +79,7 @@ function selectTrip (trip) {
 function refreshVignettes (trip) {
     // Empty .vignettes.
     vignettes.innerHTML = '';
+    zoomedElement.classList.add('hidden');
     // Loop nbImages of selected trip.
     for (let i = 1; i <= trip.nbImage; i += 1) {
         //    => create image element
