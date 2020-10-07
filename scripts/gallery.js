@@ -26,7 +26,6 @@ const trips = {
 };
 
 const $ = document.querySelector.bind( document );
-
 const vignettes = $('.vignettes');
 const lArrow = $('.lArrow');
 const rArrow = $('.rArrow');
@@ -67,6 +66,7 @@ for (const id of tripIds) {
     btn.addEventListener('click', (evt) => {
         evt.preventDefault();
         selectTrip(id);
+        
     });
 }
 close.addEventListener('click', zoomOut);
@@ -100,6 +100,7 @@ function getZoomSrc(trip, i) {
 function getVignetteSrc(trip, i) {
     return `image/travels/${trip.id}/${trip.vignette}${i}.JPG`;
 }
+
 
 function createVignette (trip, i) {
     const vignette = document.createElement('img');
@@ -157,3 +158,4 @@ function zoomOut () {
     // Hide zoomedLayout.
     zoomedElement.classList.add('hidden');
 }
+
