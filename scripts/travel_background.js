@@ -10,5 +10,5 @@ function reveal(e) {
     posY= e.pageY;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = 'rgb(255, 0, 0)';
-    ctx.fillRect(posX, posY, 100, 100);  
+    ctx.strokeRect(posX, posY, 100, 100);  
 }

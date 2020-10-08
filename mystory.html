@@ -7,16 +7,22 @@
 
 </head>
 <body>
-    <div  class='container'>
+    <button class='ham'>
+        <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="30" height="30"><path d="M0 5.5h15m-15-4h15m-15 8h15m-15 4h15" stroke="currentColor"></path></svg>
+    </button>
+    <button class='cross hidden'>
+    <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="30" height="30"><path d="M13.5.5h-12a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1v-12a1 1 0 00-1-1z" stroke="currentColor"></path></svg>
+    </button>
         <title>Story</title>
-    <nav>       
-        <a class= 'menu' href='index.html'>home</a>
-        <a class= 'menu' href= 'mystory.html'>story</a>
-        <a class= 'menu' href= 'myprojects.html'>projects</a>
-        <a class= 'menu' href='travels.html'>travels</a>
-        <a class= 'menu' href='contact.html'>contact</a>
-    </nav>
-    </div>
+        <nav class= 'nav'> 
+            <ul class='container hidden'>      
+                <li><a class= 'menu' href='index.html'>home</a></li>
+                <li><a class= 'menu' href= 'mystory.html'>story</a></li>
+                <li><a class= 'menu' href= 'myprojects.html'>projects</a></li>
+                <li><a class= 'menu' href='travels.html'>travels</a></li>
+                <li><a class= 'menu' href='contact.html'>contact</a></li>
+            </ul>
+        </nav>
     <div class='story'>
     <article id='who'>
         <h2>Who I am</h2>
@@ -43,4 +49,5 @@
     </article>
     </div>
     <footer><a href='https://www.linkedin.com/in/sebastien-lob-59509723/'><img src='image/free-linkedin-icon-10.jpg' width='50' height='50'></a></footer>
+    <script src='scripts/menu.js'></script>
 </body>
