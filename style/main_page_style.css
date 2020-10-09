@@ -23,7 +23,9 @@ html {
     left: 5px;
     background-color: transparent;
     border: none;
+    outline:none;
 }
+
 .cross.hidden {
     display: none;
 }
@@ -34,15 +36,32 @@ html {
     left: 5px;
     background-color: transparent;
     border: none;
-}
-.container.hidden {
-    display:none;
+    outline:none;
+    animation-name: fadeIn;
+    animation-duration: 0.50s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
 }
 .container{
+    display:none;
+}
+.container.hidden {
     display: grid;
     list-style: none;
     position: absolute;
-    top: 20px;
+    top: 5px;
+    gap: 30px;
+    animation-name: fadeInLeft;
+    animation-duration: 0.25s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+
+}
+.container.show{
+    display: grid;
+    list-style: none;
+    position: absolute;
+    top: 5px;
     gap: 30px;
     animation-name: fadeInRight;
     animation-duration: 0.25s;
@@ -462,6 +481,17 @@ img.laptop {
     100% {
         opacity: 1;
         transform: none;
+    }
+    }
+@keyframes fadeInLeft {
+    0% {
+        opacity: 1;
+        transform: none;
+    }
+    
+    100% {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0);
     }
     }
 @media screen and (max-width: 1023px){
