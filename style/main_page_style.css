@@ -12,7 +12,7 @@ html {
     background: linear-gradient(27deg, rgba(4,3,15,1) 0%, rgba(24,86,227,1) 49%, rgba(153,233,217,1) 100%);
 }
 
-/*bande qui contient le menu*/
+/*menu*/
 .ham.hidden {
     display: none;
 }
@@ -87,124 +87,40 @@ html {
             font-weight: bold;
         }
 
-        /*page histoire, chaque <article> est un block naturellement*/
-        article#who{
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
-            font-size: 30px;
-            text-align: center;
-        }
-        article#printing{
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
-            font-size: 30px;
-            text-align: center;
-        }
-        article#electronics{
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
-            font-size: 30px;
-            text-align: center;
-        }
-        article#programming{
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
-            font-size: 30px;
-            text-align: center;
-        }
-        p.story {
-            font-size: 20px;
-            text-align: justify;
-            line-height: 2;
-        }
- /*page de projets*/
-    div.project#articles {
-        display: flex;
-        flex-flow: wrap;
+    /*page histoire, chaque <article> est un block naturellement*/
+    article#who{
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        font-size: 30px;
+        text-align: center;
     }
-        a.project#laptop{
-            margin:50px;
-            padding: 10px;
-            font-size: 10px;
-            box-shadow: 2px 2px gray;
-            border-radius: 15px;
-            border: 1px solid;
-            border-color: rgba(255,255,255);
-
-        }
-        a.project#fidget{
-            margin:50px;
-            padding: 10px;
-            font-size: 10px;
-            border-radius: 15px;
-            box-shadow: 2px 2px gray;
-            border: 1px solid;
-            border-color: rgba(255,255,255);
-
-        }
-        a.project#drainhose{
-            margin:50px;
-            padding: 10px;
-            font-size: 10px;
-            border-radius: 15px;
-            box-shadow: 2px 2px gray;
-            border: 1px solid;
-            border-color: rgba(255,255,255);
-
-        }
-        a.project#keyboardholder{
-            margin:50px;
-            padding: 10px;
-            font-size: 10px;
-            border-radius: 15px;
-            box-shadow: 2px 2px gray;
-            border: 1px solid;
-            border-color: rgba(255,255,255);
-        }
-        a.project#laptop:hover{
-            padding: 10px;
-            border-radius: 15px;
-            box-shadow: inset 2px 2px gray;
-            margin: 50px;
-            border: 1px solid;
-        }
-        a.project#fidget:hover{
-            padding: 10px;
-            border-radius: 15px;
-            box-shadow: inset 2px 2px gray;
-            margin: 50px;
-            border: 1px solid;
-        }
-        a.project#drainhose:hover{
-            padding: 10px;
-            border-radius: 15px;
-            box-shadow: inset 2px 2px gray;
-            margin: 50px;
-            border: 1px solid;
-        }
-        a.project#keyboardholder:hover{
-            padding: 10px;
-            border-radius: 15px;
-            box-shadow: inset 2px 2px gray;
-            margin: 50px;
-            border: 1px solid;
-        }
-        p.project {
-            font-size: 15px;
-            text-align: center;
-            line-height: 2;
-        }
-        a.project{
-            text-align:center;
-            flex-grow: 1;
-            color:black;
-            outline: none;
-            text-decoration: none;
-        }
+    article#printing{
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        font-size: 30px;
+        text-align: center;
+    }
+    article#electronics{
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        font-size: 30px;
+        text-align: center;
+    }
+    article#programming{
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        font-size: 30px;
+        text-align: center;
+    }
+    p.story {
+        font-size: 20px;
+        text-align: justify;
+        line-height: 2;
+    }
 
 /*page des travel*/
     .backgroundTravel{
@@ -426,42 +342,32 @@ form {
     margin-left: .5em;
   }
 */
-header {
-    grid-column: 5 / 10;
-    grid-row:3/9;
-    text-align: center;
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
     font-size: 60px;
     padding: 100px, 0px;  
     margin-top: 100px;
 }
-footer{
+.header{
+    justify-self: center;
+    font-size: 60px;
+    padding: 100px;  
+    margin-top: 100px;
+}
+/*footer{
     display: flex;
     justify-content: center;
-    grid-column: 7;
-    grid-row: 12;
-}
-footer#project{
-    grid-column: 7;
-    grid-row: 12;
-}
+}*/
+
 h2 {
     font-size: 30px;
-    text-align: center;
 }
 h3 {
     font-size: 25px;
     text-align: center;
-}
-.download{
-    color: blue;
-}
-.download:hover{
-    color: black;
-}
-img.laptop {
-    border-width: 1px 1px 1px 1px;
-    border-radius: 10px;
-    max-width: 100vh;  
 }
 @keyframes fadeIn {
     0% {
@@ -494,84 +400,3 @@ img.laptop {
         transform: translate3d(-100%, 0, 0);
     }
     }
-@media screen and (max-width: 1023px){
-    .container{
-        display: grid;
-        grid-template-columns:repeat(7, minmax(0,1fr));
-        gap:20px;
-    }
-    div.project#articles{
-        display: flex;
-        flex-flow: wrap;
-        grid-column: 1 / -1;
-    }
-    nav#index{
-        display: inline-flex;
-        grid-column: 1/-1;
-        position: sticky;
-        top: 0px;
-    }
-    nav{
-        display: inline-flex;
-        grid-column: 1/-1;
-        position: sticky;
-        top: 0px;
-    }
-    header {
-        grid-column: 2 / 7;
-        grid-row:3/9;
-        text-align: center;
-        font-size: 60px;
-        padding: 100px, 0px;  
-        margin-top: 100px;
-    }
-    article.story{
-        display: grid;
-        grid-column: 2 /7;
-        align-items: center;
-        align-content: center;
-    }
-    a#laptop{
-        flex:1;
-        margin:10px;
-        padding: 10px;
-        font-size: 10px;
-        box-shadow: 2px 2px gray;
-        border-radius: 15px;
-        border: 1px solid transparent;
-    }
-    a#fidget{
-        flex:1;
-        margin:10px;
-        padding: 10px;
-        font-size: 10px;
-        box-shadow: 2px 2px gray;
-        border-radius: 15px;
-        border: 1px solid transparent;
-    }
-    a#drainhose{
-        flex:1;
-        margin:10px;
-        padding: 10px;
-        font-size: 10px;
-        box-shadow: 2px 2px gray;
-        border-radius: 15px;
-        border: 1px solid transparent;
-    }
-    a#keyboardholder{
-        flex:1;
-        margin:10px;
-        padding: 10px;
-        font-size: 10px;
-        box-shadow: 2px 2px gray;
-        border-radius: 15px;
-        border: 1px solid transparent;
-    }
-    footer{
-        grid-column: 4;
-        grid-row: 12;
-    }
-    footer#project{
-        grid-column: 4;
-    }
-}
