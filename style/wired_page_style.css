@@ -1,0 +1,105 @@
+.wired-style-container{
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+svg{
+    width: 160px;
+    height: 32px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.header{
+    left:0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 99999999;
+    display: block;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    box-shadow: -3px -3px 3px 0 rgba(0,0,0,0.19), 3px 0 3px 0 rgba(0,0,0,0.19), 0 3px 3px 0 rgba(0,0,0,0.23);
+}
+.wired-title{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    top: 50%;
+    width: 160px;
+    height: 32px;
+    background-size: 160px;
+}
+.logo-bar{
+    display: block;
+    height: 60px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    line-height: 16px;
+    clear: both;
+}
+
+.logo-bar--default{
+    border-bottom: 1px solid #ccc;
+    color: #12679b;
+}
+
+.wired-style-nav{
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.wired-style-menu{
+    display: flex;
+    list-style-type: none;
+    list-style-position: outside;
+    line-height: 16px;
+    padding-inline-start: 40px;
+    justify-content: center;
+    border-top-color: initial;
+    border-top-style: initial;
+    border-top-width: 0px;
+    border-right-color: initial;
+    border-right-style: initial;
+    border-right-width: 0px;
+    border-bottom-color: initial;
+    border-bottom-style: initial;
+    border-bottom-width: 0px;
+    border-left-color: initial;
+    border-left-style: initial;
+    border-left-width: 0px;
+    margin:0;
+}
+li {
+    display: list-item;
+}
+.wired-style-item{
+    vertical-align: middle;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.08em;
+    line-height: 16px;
+    float: left;
+    cursor: pointer;
+    color: #666;
+    border-right: 1px solid #ccc;
+    width: calc(100% / 9);
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.wired-style-item:nth-child(1){
+    border-left: 1px solid #ccc;
+}
